@@ -17,6 +17,7 @@ module.exports = ({request, s3_instance = null, awsCredentials = null, bucket = 
     const s3 = s3_instance || getS3(awsCredentials);
     busboy.on('field', (fieldname, val) => {
       fields[fieldname] = val;
+      request.body[fieldname]=val;
     });
     busboy.on('file', async (fieldname, file, filename, encoding, mimetype) => {
       // to cover for the chrome's bug of incorrect mimetype
