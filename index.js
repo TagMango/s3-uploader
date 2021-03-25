@@ -56,6 +56,7 @@ module.exports = ({request, s3_instance = null, awsCredentials = null, bucket = 
             Bucket,
             Key: key,
             Body: passToS3,
+            ContentType: mimetype,
             ...s3UploadParams,
           }, (err, data) => {
             if (err) {
