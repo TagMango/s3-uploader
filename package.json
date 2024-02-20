@@ -1,6 +1,6 @@
 {
-  "name": "@losttracker/s3-uploader",
-  "version": "1.0.5",
+  "name": "@tagmango/s3-uploader",
+  "version": "1.0.0",
   "description": "Package to upload compressed files to AWS S3",
   "main": "index.js",
   "scripts": {
